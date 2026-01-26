@@ -1,7 +1,7 @@
 body {
     font-family: Impact;
     text-align: center;
-    background-image: url("Фон.png");
+    background-image: url(/Фон.png);
 }
 
 #Карты-Дилера img {
@@ -28,4 +28,5 @@ body {
     font-size: 20px;
 
 }
+
 
