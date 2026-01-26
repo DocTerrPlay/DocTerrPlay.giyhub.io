@@ -1,0 +1,28 @@
+body {
+    font-family: Impact;
+    text-align: center;
+}
+
+#Карты-Дилера img {
+    height: 200px;
+    width: 150px;
+    margin: 1px;
+}
+
+#Карты-ТЫ img {
+    height: 200px;
+    width: 150px;
+    margin: 1px;
+}
+
+#Взять {
+    width: 120px;
+    height: 70px;
+    font-size: 20px;
+}
+
+#Хватит {
+    width: 120px;
+    height: 70px;
+    font-size: 20px;
+}
