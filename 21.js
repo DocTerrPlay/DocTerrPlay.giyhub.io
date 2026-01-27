@@ -48,25 +48,25 @@ function startGame() {
         //<img src="./cards/4-C.png">
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "./cards/" + card + ".png";
+        cardImg.src = "./Карты/" + card + ".png";
         dealerSum += getValue(card);
         dealerAceCount += checkAce(card);
-        document.getElementById("dealer-cards").append(cardImg);
+        document.getElementById("Карты-Дилера").append(cardImg);
     }
     console.log(dealerSum);
 
     for (let i = 0; i < 2; i++) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "./cards/" + card + ".png";
+        cardImg.src = "./Карты/" + card + ".png";
         yourSum += getValue(card);
         yourAceCount += checkAce(card);
-        document.getElementById("your-cards").append(cardImg);
+        document.getElementById("Карты-ТЫ").append(cardImg);
     }
 
     console.log(yourSum);
-    document.getElementById("hit").addEventListener("click", hit);
-    document.getElementById("stay").addEventListener("click", stay);
+    document.getElementById("Взять").addEventListener("click", hit);
+    document.getElementById("Хватит").addEventListener("click", stay);
 
 }
 
@@ -77,10 +77,10 @@ function hit() {
 
     let cardImg = document.createElement("img");
     let card = deck.pop();
-    cardImg.src = "./cards/" + card + ".png";
+    cardImg.src = "./Карты/" + card + ".png";
     yourSum += getValue(card);
     yourAceCount += checkAce(card);
-    document.getElementById("your-cards").append(cardImg);
+    document.getElementById("Карты-ТЫ").append(cardImg);
 
     if (reduceAce(yourSum, yourAceCount) > 21) { //A, J, 8 -> 1 + 10 + 8
         canHit = false;
@@ -93,29 +93,29 @@ function stay() {
     yourSum = reduceAce(yourSum, yourAceCount);
 
     canHit = false;
-    document.getElementById("hidden").src = "./cards/" + hidden + ".png";
+    document.getElementById("Скрытые").src = "./Карты/" + hidden + ".png";
 
     let message = "";
     if (yourSum > 21) {
-        message = "You Lose!";
+        message = "Анлаки";
     }
     else if (dealerSum > 21) {
-        message = "You win!";
+        message = "Окуп";
     }
     //both you and dealer <= 21
     else if (yourSum == dealerSum) {
-        message = "Tie!";
+        message = "Депни ещё";
     }
     else if (yourSum > dealerSum) {
-        message = "You Win!";
+        message = "Окуп";
     }
     else if (yourSum < dealerSum) {
-        message = "You Lose!";
+        message = "Анлаки";
     }
 
-    document.getElementById("dealer-sum").innerText = dealerSum;
-    document.getElementById("your-sum").innerText = yourSum;
-    document.getElementById("results").innerText = message;
+    document.getElementById("Дилер-сум").innerText = dealerSum;
+    document.getElementById("Ты-сум").innerText = yourSum;
+    document.getElementById("Результаты").innerText = message;
 }
 
 function getValue(card) {
@@ -145,3 +145,4 @@ function reduceAce(playerSum, playerAceCount) {
     }
     return playerSum;
 }
+
