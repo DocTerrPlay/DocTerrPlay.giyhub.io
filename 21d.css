@@ -32,8 +32,15 @@ body {
     height: 50px;
     font-size: 20px;
 }
-h2 { font-size: 80px; }
+h2 {   
+  color: white;  
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
+    font-size: 80px; }
 
+message {   
+  color: white;  
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
+    font-size: 80px; }
 
 
 
