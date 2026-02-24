@@ -9,6 +9,13 @@
 <script src="21.js"></script>
 <style>
 body { background: url(Фон.png); }
+  dialog {
+			margin: auto;
+ 			position: absolute;
+  		top: 0; left: 0; bottom: 0; right: 0;		  background: lightblue;
+		  border: none;
+		  border-radius: 1rem;
+		}
 </style>
 </head>
   
@@ -26,6 +33,26 @@ body { background: url(Фон.png); }
 <button id="Взять">Взять</button>
 <button id="Хватит">Хватит</button>
 <button id="i">???</button>
+<dialog>
+      <p>
+        Когда начинаешь изучать JavaScript, сначала чувствуешь эйфорию: очень легко работать с переменными, не нужно следить за типами, просто назвал и пользуешься. Но с великой свободой приходит великая ответственность. Если вы только начинаете пользоваться этим языком, обратите внимание на нюанс с типами данных.
+
+      </p>
+      <p>
+   			<button id="close">Закрыть окно</button>
+  		</p>
+    </dialog>
+    <script>
+      var dialog = document.querySelector('dialog')
+
+      document.querySelector('#open').onclick = function () {
+        dialog.showModal()
+      }
+
+      document.querySelector('#close').onclick = function () {
+        dialog.close() 
+      }
+    </script>
 
 <p id="Результаты"></p>
 </body>
